@@ -1,0 +1,67 @@
+body *{
+    display: inline-block;
+}
+@keyframes loadingRotate{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes circleChange{
+    0% {r:15%}
+    50% {r:18%}
+    100% {r:15%}
+}
+.loading{
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+    
+}
+.loading > svg {
+    animation: loadingRotate 2s cubic-bezier(0.65, 0.01, 0.29, 0.97) infinite;
+}
+
+.loading > svg > circle {
+    width: 50px;
+    animation: circleChange 2s ease-in-out infinite;
+}
+
+@keyframes circleMove{
+    0% {cx:-20%;cy:80%;}
+    20% {cx:50%;cy:80%;}
+    80% {cx:50%;cy:80%;}
+    100% {cx:120%;cy:80%;}
+}
+@keyframes loadingRotate1{
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(0deg); }
+    80% { transform: rotate(-360deg); }
+    100% { transform: rotate(-360deg); }
+}
+.loading1{
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+}
+.loading1 > svg {
+     animation: loadingRotate1 2s linear infinite;
+}
+.loading1 > svg > circle {
+    width: 50px;
+    animation: circleMove 2s linear infinite;
+}
+
+@keyframes loadingRotate2{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loading2{
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+}
+.loading2 > svg {
+     animation: loadingRotate2 2s linear infinite;
+}
